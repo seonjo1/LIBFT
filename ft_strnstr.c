@@ -6,7 +6,7 @@
 /*   By: seonjo <seonjo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 21:00:50 by seonjo            #+#    #+#             */
-/*   Updated: 2023/03/13 21:31:44 by seonjo           ###   ########.fr       */
+/*   Updated: 2023/03/13 21:41:47 by seonjo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,10 +57,10 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	return (0);
 }
 
-#include <stdio.h>
-#include <string.h>
-int main(void)
-{
-	printf("ft_strnstr : %s\n", ft_strnstr("abcdefghijklmn", "ghi", 9));
-	printf("strnstr : %s\n", strnstr("abcdefghijklmn", "ghi", 9));
-}
+// #include <stdio.h>
+// #include <string.h>
+// int main(void)
+// {
+// 	printf("ft_strnstr : %s\n", ft_strnstr("abcdefghijklmn", "cdefghi", 12));
+// 	printf("strnstr : %s\n", strnstr("abcdefghijklmn", "cdefghi", 12));
+// }

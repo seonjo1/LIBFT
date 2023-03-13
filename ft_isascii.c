@@ -6,11 +6,11 @@
 /*   By: seonjo <seonjo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 15:43:11 by seonjo            #+#    #+#             */
-/*   Updated: 2023/03/13 15:44:18 by seonjo           ###   ########.fr       */
+/*   Updated: 2023/03/13 22:04:30 by seonjo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
 		return (1);

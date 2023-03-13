@@ -1,29 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seonjo <seonjo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/13 19:59:29 by seonjo            #+#    #+#             */
-/*   Updated: 2023/03/13 22:01:52 by seonjo           ###   ########.fr       */
+/*   Created: 2023/03/13 21:42:17 by seonjo            #+#    #+#             */
+/*   Updated: 2023/03/13 21:47:48 by seonjo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
-{
-	while (*s)
-	{
-		if (*s == c)
-			return ((char *)s);
-		s++;
-	}	
-	return (0);
-}
+#include <stdlib.h>
 
-// #include <stdio.h>
-// int main(void)
-// {
-// 	printf("%s",ft_strchr("abcdemfghijklmn", 'm'));
-// 	return (0);
-// }
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+{
+	int		i;
+	size_t	j;
+	size_t	n;
+
+	i = 0;
+	j = 0;
+	n = size;
+	if (n != 0)
+	{
+		while (n > 1)
+		{
+			if (src[i])
+			{
+				dest[i] = src[i];
+				i++;
+			}
+			n--;
+		}
+		dest[i] = 0;
+	}
+	while (src[j])
+	{
+		j++;
+	}
+	return (j);
+}

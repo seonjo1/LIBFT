@@ -6,7 +6,7 @@
 /*   By: seonjo <seonjo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 20:32:47 by seonjo            #+#    #+#             */
-/*   Updated: 2023/03/13 20:37:20 by seonjo           ###   ########.fr       */
+/*   Updated: 2023/03/13 22:00:50 by seonjo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	int i;
-	int len;
+	int	i;
+	int	len;
 
 	len = ft_strlen(s);
 	i = len - 1;

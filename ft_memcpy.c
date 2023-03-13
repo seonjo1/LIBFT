@@ -6,13 +6,12 @@
 /*   By: seonjo <seonjo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 19:44:18 by seonjo            #+#    #+#             */
-/*   Updated: 2023/03/13 19:48:50 by seonjo           ###   ########.fr       */
+/*   Updated: 2023/03/13 21:51:48 by seonjo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+// #include <stdlib.h>
 
-void	*memcpy(void *dst, const void *src, size_t n)
-{
-	
-}
+// void	*memcpy(void *dst, const void *src, size_t n)
+// {
+// }
