@@ -14,7 +14,7 @@ $(NAME) : $(OBJS)
 	$(ARFLGS) $(NAME) $(OBJS)
 
 %.o : %.c
-	$(CC) $(CFLAGS) -c $<
+	$(CC) $(CFLAGS) -I . -c $<
 
 clean :
 	rm -f $(OBJS)

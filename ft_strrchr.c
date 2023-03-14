@@ -6,7 +6,7 @@
 /*   By: seonjo <seonjo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 20:32:47 by seonjo            #+#    #+#             */
-/*   Updated: 2023/03/13 22:00:50 by seonjo           ###   ########.fr       */
+/*   Updated: 2023/03/14 15:30:55 by seonjo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,10 @@ char	*ft_strrchr(const char *s, int c)
 	int	i;
 	int	len;
 
+	while (c > 255)
+		c = c % 256;
 	len = ft_strlen(s);
-	i = len - 1;
+	i = len;
 	while (i >= 0)
 	{
 		if (s[i] == c)
@@ -37,10 +39,3 @@ char	*ft_strrchr(const char *s, int c)
 	}	
 	return (0);
 }
-
-// #include <stdio.h>
-// int main(void)
-// {
-// 	printf("%s",ft_strchr("abcdemfghijklmn", 'm'));
-// 	return (0);
-// }
