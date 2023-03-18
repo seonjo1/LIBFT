@@ -6,11 +6,11 @@
 /*   By: seonjo <seonjo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 21:00:50 by seonjo            #+#    #+#             */
-/*   Updated: 2023/03/13 21:41:47 by seonjo           ###   ########.fr       */
+/*   Updated: 2023/03/15 11:45:22 by seonjo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 int	char_cmp(char *haystack, char *needle, size_t i, size_t len)
 {

@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seonjo <seonjo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/13 15:17:25 by seonjo            #+#    #+#             */
-/*   Updated: 2023/03/15 11:45:10 by seonjo           ###   ########.fr       */
+/*   Created: 2023/03/15 22:33:12 by seonjo            #+#    #+#             */
+/*   Updated: 2023/03/15 22:35:01 by seonjo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void	ft_putstr_fd(char *s, int fd)
 {
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+	write(fd, s, ft_strlen(s));
 }
-// #include <stdio.h>
-// int main(void)
-// {
-// 	printf("%zu", ft_strlen("asdfafkla"));
-// 	return (0);
-// }

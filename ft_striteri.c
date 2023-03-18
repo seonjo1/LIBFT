@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seonjo <seonjo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/13 15:17:25 by seonjo            #+#    #+#             */
-/*   Updated: 2023/03/15 11:45:10 by seonjo           ###   ########.fr       */
+/*   Created: 2023/03/15 21:14:53 by seonjo            #+#    #+#             */
+/*   Updated: 2023/03/15 22:21:48 by seonjo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	size_t	i;
+	unsigned int	len;
+	unsigned int	i;
 
 	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+	len = (unsigned int)ft_strlen(s);
+	while (i < len)
+		f(i++, s++);
 }
-// #include <stdio.h>
-// int main(void)
-// {
-// 	printf("%zu", ft_strlen("asdfafkla"));
-// 	return (0);
-// }

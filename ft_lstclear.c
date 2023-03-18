@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seonjo <seonjo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/13 15:17:25 by seonjo            #+#    #+#             */
-/*   Updated: 2023/03/15 11:45:10 by seonjo           ###   ########.fr       */
+/*   Created: 2023/03/17 19:58:47 by seonjo            #+#    #+#             */
+/*   Updated: 2023/03/17 20:01:57 by seonjo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	size_t	i;
+	t_list	*now;
+	t_list	*next;
 
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+	now = *lst;
+	while (now)
+	{
+		next = now -> next;
+		del(now -> content);
+		free(now);
+		now = next;
+	}
+	*lst = 0;
 }
-// #include <stdio.h>
-// int main(void)
-// {
-// 	printf("%zu", ft_strlen("asdfafkla"));
-// 	return (0);
-// }

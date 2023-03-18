@@ -6,11 +6,11 @@
 /*   By: seonjo <seonjo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 20:37:02 by seonjo            #+#    #+#             */
-/*   Updated: 2023/03/14 21:50:50 by seonjo           ###   ########.fr       */
+/*   Updated: 2023/03/15 11:44:13 by seonjo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

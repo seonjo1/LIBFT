@@ -6,11 +6,11 @@
 /*   By: seonjo <seonjo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 16:11:58 by seonjo            #+#    #+#             */
-/*   Updated: 2023/03/14 20:25:50 by seonjo           ###   ########.fr       */
+/*   Updated: 2023/03/15 11:44:32 by seonjo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)
 {

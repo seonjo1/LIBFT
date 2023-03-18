@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seonjo <seonjo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/13 15:17:25 by seonjo            #+#    #+#             */
-/*   Updated: 2023/03/15 11:45:10 by seonjo           ###   ########.fr       */
+/*   Created: 2023/03/17 16:10:21 by seonjo            #+#    #+#             */
+/*   Updated: 2023/03/17 19:51:29 by seonjo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	size_t	i;
+	t_list	*last;
 
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+	if (*lst == 0)
+		*lst = new;
+	else
+	{
+		last = ft_lstlast(*lst);
+		last -> next = new;
+	}
 }
-// #include <stdio.h>
-// int main(void)
-// {
-// 	printf("%zu", ft_strlen("asdfafkla"));
-// 	return (0);
-// }

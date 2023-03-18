@@ -1,29 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seonjo <seonjo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/13 15:17:25 by seonjo            #+#    #+#             */
-/*   Updated: 2023/03/15 11:45:10 by seonjo           ###   ########.fr       */
+/*   Created: 2023/03/15 22:39:22 by seonjo            #+#    #+#             */
+/*   Updated: 2023/03/17 14:45:38 by seonjo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void	n_print(long long num, int fd)
 {
-	size_t	i;
+	char	c;
 
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+	if (num != 0)
+	{
+		n_print(num / 10, fd);
+		c = num % 10 + '0';
+		write(fd, &c, 1);
+	}
 }
-// #include <stdio.h>
-// int main(void)
-// {
-// 	printf("%zu", ft_strlen("asdfafkla"));
-// 	return (0);
-// }
+
+void	ft_putnbr_fd(int n, int fd)
+{
+	long long	num;
+	int			minus;
+
+	num = n;
+	minus = 1;
+	if (num == 0)
+		write(fd, "0", 1);
+	else
+	{
+		if (num < 0)
+		{
+			write(fd, "-", 1);
+			num = -num;
+		}
+		n_print(num, fd);
+	}
+}

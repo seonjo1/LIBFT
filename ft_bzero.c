@@ -6,11 +6,11 @@
 /*   By: seonjo <seonjo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 16:30:40 by seonjo            #+#    #+#             */
-/*   Updated: 2023/03/13 20:40:33 by seonjo           ###   ########.fr       */
+/*   Updated: 2023/03/15 11:43:40 by seonjo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

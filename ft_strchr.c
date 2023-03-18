@@ -6,14 +6,13 @@
 /*   By: seonjo <seonjo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 19:59:29 by seonjo            #+#    #+#             */
-/*   Updated: 2023/03/14 15:28:45 by seonjo           ###   ########.fr       */
+/*   Updated: 2023/03/15 16:34:46 by seonjo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (c >= 256)
-		c = c % 256;
+	c = (unsigned char)c;
 	while (*s)
 	{
 		if (*s == c)

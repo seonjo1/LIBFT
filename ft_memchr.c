@@ -6,11 +6,11 @@
 /*   By: seonjo <seonjo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 21:52:28 by seonjo            #+#    #+#             */
-/*   Updated: 2023/03/14 22:02:37 by seonjo           ###   ########.fr       */
+/*   Updated: 2023/03/15 11:44:03 by seonjo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

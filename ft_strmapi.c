@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seonjo <seonjo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/13 15:17:25 by seonjo            #+#    #+#             */
-/*   Updated: 2023/03/15 11:45:10 by seonjo           ###   ########.fr       */
+/*   Created: 2023/03/15 21:00:32 by seonjo            #+#    #+#             */
+/*   Updated: 2023/03/15 21:13:55 by seonjo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t	i;
+	unsigned int	i;
+	unsigned int	l;
+	char			*dest;
 
+	l = (unsigned int)ft_strlen(s);
+	dest = (char *)malloc(sizeof(char) * (l + 1));
+	if (dest == 0)
+		return (0);
 	i = 0;
-	while (s[i])
+	while (i < l)
+	{
+		dest[i] = f(i, s[i]);
 		i++;
-	return (i);
+	}
+	dest[i] = 0;
+	return (dest);
 }
-// #include <stdio.h>
-// int main(void)
-// {
-// 	printf("%zu", ft_strlen("asdfafkla"));
-// 	return (0);
-// }
