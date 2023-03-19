@@ -6,13 +6,13 @@
 /*   By: seonjo <seonjo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 20:14:27 by seonjo            #+#    #+#             */
-/*   Updated: 2023/03/18 17:05:17 by seonjo           ###   ########.fr       */
+/*   Updated: 2023/03/19 17:08:09 by seonjo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*make_tmp(t_list *lst, void *(*f)(void *), void (*del)(void *))
+static t_list	*make_tmp(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	void	*con;
 	t_list	*tmp;

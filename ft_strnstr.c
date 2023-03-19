@@ -6,13 +6,13 @@
 /*   By: seonjo <seonjo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 21:00:50 by seonjo            #+#    #+#             */
-/*   Updated: 2023/03/15 11:45:22 by seonjo           ###   ########.fr       */
+/*   Updated: 2023/03/18 22:21:35 by seonjo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	char_cmp(char *haystack, char *needle, size_t i, size_t len)
+static int	c_cmp(char *haystack, char *needle, size_t i, size_t len)
 {
 	size_t	j;
 
@@ -46,7 +46,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 			return (0);
 		if (haystack[i] == needle[0])
 		{
-			flag = char_cmp((char *)haystack, (char *)needle, i, len);
+			flag = c_cmp((char *)haystack, (char *)needle, i, len);
 			if (flag == 1)
 				return (&((char *)haystack)[i]);
 			else if (flag == 2)
@@ -56,11 +56,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
-
-// #include <stdio.h>
-// #include <string.h>
-// int main(void)
-// {
-// 	printf("ft_strnstr : %s\n", ft_strnstr("abcdefghijklmn", "cdefghi", 12));
-// 	printf("strnstr : %s\n", strnstr("abcdefghijklmn", "cdefghi", 12));
-// }

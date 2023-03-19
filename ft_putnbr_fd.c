@@ -6,13 +6,13 @@
 /*   By: seonjo <seonjo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 22:39:22 by seonjo            #+#    #+#             */
-/*   Updated: 2023/03/17 14:45:38 by seonjo           ###   ########.fr       */
+/*   Updated: 2023/03/19 16:57:55 by seonjo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	n_print(long long num, int fd)
+static void	n_print(long long num, int fd)
 {
 	char	c;
 

@@ -6,7 +6,7 @@
 /*   By: seonjo <seonjo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 16:30:40 by seonjo            #+#    #+#             */
-/*   Updated: 2023/03/15 11:43:40 by seonjo           ###   ########.fr       */
+/*   Updated: 2023/03/18 21:16:39 by seonjo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,10 @@
 void	ft_bzero(void *s, size_t n)
 {
 	size_t			i;
-	unsigned char	*us;
+	unsigned char	*s1;
 
-	us = (unsigned char *)s;
+	s1 = (unsigned char *)s;
 	i = 0;
-	while (i != n)
-	{
-		*us++ = 0;
-		i++;
-	}
+	while (i++ < n)
+		*s1++ = 0;
 }
-
-// #include <stdio.h>
-// int main(void)
-// {
-// 	char str[10] = "123456789";
-// 	printf("%s\n", str);
-// 	ft_bzero(str, 1);
-// 	for (int i = 0; i < 9; i++)
-// 		printf("i : %d , str[i] : %c \n", i, str[i]);
-// 	return 0;
-// }

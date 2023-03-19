@@ -6,7 +6,7 @@
 /*   By: seonjo <seonjo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 20:43:18 by seonjo            #+#    #+#             */
-/*   Updated: 2023/03/15 11:45:13 by seonjo           ###   ########.fr       */
+/*   Updated: 2023/03/18 21:36:26 by seonjo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-
-// #include <stdio.h>
-// int main(void)
-// {
-// 	printf("%d", ft_strncmp("ffffcz", "ffffcz", 10));
-// }

@@ -6,7 +6,7 @@
 /*   By: seonjo <seonjo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 20:37:02 by seonjo            #+#    #+#             */
-/*   Updated: 2023/03/15 11:44:13 by seonjo           ###   ########.fr       */
+/*   Updated: 2023/03/18 22:07:06 by seonjo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-
-// #include <stdio.h>
-// int main(void)
-// {
-// 	printf("%d", ft_memcmp("t\200","t\0", 2));
-// }

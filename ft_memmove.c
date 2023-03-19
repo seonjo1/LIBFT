@@ -6,13 +6,13 @@
 /*   By: seonjo <seonjo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 22:04:05 by seonjo            #+#    #+#             */
-/*   Updated: 2023/03/15 14:27:05 by seonjo           ###   ########.fr       */
+/*   Updated: 2023/03/18 21:14:44 by seonjo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	another_case(unsigned char *s, unsigned char *d, size_t i, size_t len)
+static void	rev(unsigned char *s, unsigned char *d, size_t i, size_t len)
 {
 	if (len != 0)
 	{
@@ -42,6 +42,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 			*d++ = *s++;
 	}
 	else
-		another_case(s, d, len - 1, len);
+		rev(s, d, len - 1, len);
 	return (dst);
 }

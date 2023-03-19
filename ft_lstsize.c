@@ -6,7 +6,7 @@
 /*   By: seonjo <seonjo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 15:58:54 by seonjo            #+#    #+#             */
-/*   Updated: 2023/03/17 16:03:48 by seonjo           ###   ########.fr       */
+/*   Updated: 2023/03/19 17:02:31 by seonjo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,13 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	t_list	*now;
-	size_t	i;
+	size_t	size;
 
-	i = 0;
-	now = lst;
-	while (now)
+	size = 0;
+	while (lst)
 	{
-		i++;
-		now = now -> next;
+		size++;
+		lst = lst -> next;
 	}
-	return (i);
+	return (size);
 }

@@ -6,16 +6,15 @@
 /*   By: seonjo <seonjo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 12:40:21 by seonjo            #+#    #+#             */
-/*   Updated: 2023/03/15 14:10:20 by seonjo           ###   ########.fr       */
+/*   Updated: 2023/03/19 16:37:36 by seonjo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr2(const char *s, int c)
+static char	*ft_strchr2(const char *s, int c)
 {
-	while (c >= 256)
-		c = c % 256;
+	c = (unsigned char)c;
 	while (*s)
 	{
 		if (*s == c)
@@ -25,7 +24,7 @@ char	*ft_strchr2(const char *s, int c)
 	return (0);
 }
 
-size_t	find(char const *s1, char const *set, size_t i, int option)
+static size_t	find(char const *s1, char const *set, size_t i, int option)
 {
 	if (option == 0)
 	{
@@ -41,7 +40,7 @@ size_t	find(char const *s1, char const *set, size_t i, int option)
 	}
 }
 
-char	*empty_c(void)
+static char	*empty_c(void)
 {
 	char	*s;
 

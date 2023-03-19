@@ -6,7 +6,7 @@
 /*   By: seonjo <seonjo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 15:03:25 by seonjo            #+#    #+#             */
-/*   Updated: 2023/03/17 15:40:25 by seonjo           ###   ########.fr       */
+/*   Updated: 2023/03/19 16:59:41 by seonjo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list	*n;
+	t_list	*new;
 
-	n = (t_list *)malloc(sizeof(t_list));
-	if (n == 0)
+	new = (t_list *)malloc(sizeof(t_list));
+	if (new == 0)
 		return (0);
-	n -> content = content;
-	n -> next = 0;
-	return (n);
+	new -> content = content;
+	new -> next = 0;
+	return (new);
 }

@@ -6,13 +6,13 @@
 /*   By: seonjo <seonjo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 15:24:46 by seonjo            #+#    #+#             */
-/*   Updated: 2023/03/15 22:12:37 by seonjo           ###   ########.fr       */
+/*   Updated: 2023/03/19 16:49:51 by seonjo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	find_str_num(char const *s, char c, size_t j, int opt)
+static size_t	find_str_num(char const *s, char c, size_t j, int opt)
 {
 	size_t	n;
 	size_t	i;
@@ -21,7 +21,7 @@ size_t	find_str_num(char const *s, char c, size_t j, int opt)
 	{
 		i = 0;
 		n = 0;
-		while (s[i] != 0)
+		while (s[i])
 		{
 			if (s[i] != c && (s[i + 1] == c || s[i + 1] == 0))
 				n++;
@@ -37,20 +37,18 @@ size_t	find_str_num(char const *s, char c, size_t j, int opt)
 	}
 }
 
-int	make_arr(char *arr, char const *s, char c, size_t j)
+static int	fill_arr(char *arr, char const *s, char c, size_t j)
 {
-	size_t	index;
 	size_t	i;
 
 	i = 0;
-	index = j;
-	while (s[index] != c && s[index])
-		arr[i++] = s[index++];
+	while (s[j] != c && s[j])
+		arr[i++] = s[j++];
 	arr[i] = 0;
-	return (index);
+	return (j);
 }
 
-size_t	get_len2(char const *s, char c, size_t j)
+static size_t	get_len(char const *s, char c, size_t j)
 {
 	size_t	len;
 
@@ -63,7 +61,7 @@ size_t	get_len2(char const *s, char c, size_t j)
 	return (len);
 }
 
-char	**allfree(char **arr, size_t i)
+static char	**allfree(char **arr, size_t i)
 {
 	size_t	j;
 
@@ -76,39 +74,27 @@ char	**allfree(char **arr, size_t i)
 
 char	**ft_split(char const *s, char c)
 {
-	size_t	len;
+	size_t	num;
 	size_t	i;
 	size_t	j;
 	char	**arr;
 
 	i = 0;
 	j = 0;
-	len = find_str_num(s, c, j, 0);
-	arr = (char **)malloc(sizeof(char *) * (len + 1));
+	num = find_str_num(s, c, j, 0);
+	arr = (char **)malloc(sizeof(char *) * (num + 1));
 	if (arr == 0)
 		return (0);
-	while (i < len)
+	while (i < num)
 	{
 		j = find_str_num(s, c, j, 1);
 		if (s[j] == 0)
 			break ;
-		arr[i] = (char *)malloc(sizeof(char) * (get_len2(s, c, j) + 1));
+		arr[i] = (char *)malloc(sizeof(char) * (get_len(s, c, j) + 1));
 		if (arr[i] == 0)
 			return (allfree(arr, i));
-		j = make_arr(arr[i++], s, c, j);
+		j = fill_arr(arr[i++], s, c, j);
 	}
 	arr[i] = 0;
 	return (arr);
 }
-
-// #include <string.h>
-// #include <stdio.h>
-// int	main(void)
-// {
-// 	char **arr;
-// 	char string[] = "hello!zzz";
-// 	arr = ft_split(string, 'z');
-// 	int i = 0;
-// 	while (i < 2)
-// 		printf("%s\n",arr[i++]);
-// }

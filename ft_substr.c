@@ -6,13 +6,13 @@
 /*   By: seonjo <seonjo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 11:46:31 by seonjo            #+#    #+#             */
-/*   Updated: 2023/03/15 20:24:41 by seonjo           ###   ########.fr       */
+/*   Updated: 2023/03/19 16:34:53 by seonjo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*make_emptystr(void)
+static char	*make_emptystr(void)
 {
 	char	*c;
 
@@ -27,23 +27,23 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*c;
 	size_t	l;
-	size_t	i;
+	size_t	st;
 	size_t	j;
 
-	i = (size_t)start;
+	st = (size_t)start;
 	j = 0;
 	l = ft_strlen(s);
-	if (i >= l)
+	if (st >= l)
 		return (make_emptystr());
-	if (l - i > len)
+	if (l > len + st)
 		l = len;
 	else
-		l -= i;
+		l -= st;
 	c = (char *)malloc(sizeof(char) * (l + 1));
 	if (c == 0)
 		return (0);
 	while (j < l)
-		c[j++] = s[i++];
+		c[j++] = s[st++];
 	c[j] = 0;
 	return (c);
 }

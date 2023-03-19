@@ -6,7 +6,7 @@
 /*   By: seonjo <seonjo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 16:04:51 by seonjo            #+#    #+#             */
-/*   Updated: 2023/03/17 16:09:41 by seonjo           ###   ########.fr       */
+/*   Updated: 2023/03/19 17:03:34 by seonjo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,9 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	t_list	*now;
-
-	now = lst;
 	if (lst == 0)
-		return (now);
-	while (now -> next)
-		now = now -> next;
-	return (now);
+		return (lst);
+	while (lst -> next)
+		lst = lst -> next;
+	return (lst);
 }

@@ -6,7 +6,7 @@
 /*   By: seonjo <seonjo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 20:48:56 by seonjo            #+#    #+#             */
-/*   Updated: 2023/03/18 17:23:13 by seonjo           ###   ########.fr       */
+/*   Updated: 2023/03/18 21:31:20 by seonjo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,16 +28,11 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 		while (size > 1 + i)
 		{
 			if (*src)
-			{
-				dest[i] = *src;
-				i++;
-				src++;
-			}
+				dest[i++] = *src++;
 			else
 				break ;
 		}
-	dest[i] = 0;
+		dest[i] = 0;
 	}
 	return (len_s + len_d);
 }
-
