@@ -6,7 +6,7 @@
 /*   By: seonjo <seonjo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 12:40:21 by seonjo            #+#    #+#             */
-/*   Updated: 2023/03/19 16:37:36 by seonjo           ###   ########.fr       */
+/*   Updated: 2023/09/22 14:45:32 by seonjo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ static char	*empty_c(void)
 {
 	char	*s;
 
-	s = (char *)malloc(sizeof(char));
+	s = ft_calloc(sizeof(char), 1);
 	if (s == 0)
 		return (0);
 	*s = 0;
@@ -65,7 +65,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (i == l)
 		return (empty_c());
 	j = find(s1, set, l - 1, 1);
-	s = (char *)malloc(sizeof(char) * (j - i + 2));
+	s = ft_calloc(sizeof(char), j - i + 2);
 	if (s == 0)
 		return (0);
 	l = 0;

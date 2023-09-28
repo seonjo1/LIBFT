@@ -6,7 +6,7 @@
 /*   By: seonjo <seonjo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 15:24:46 by seonjo            #+#    #+#             */
-/*   Updated: 2023/03/19 16:49:51 by seonjo           ###   ########.fr       */
+/*   Updated: 2023/09/22 14:43:17 by seonjo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	j = 0;
 	num = find_str_num(s, c, j, 0);
-	arr = (char **)malloc(sizeof(char *) * (num + 1));
+	arr = ft_calloc(sizeof(char *), num + 1);
 	if (arr == 0)
 		return (0);
 	while (i < num)
@@ -90,7 +90,7 @@ char	**ft_split(char const *s, char c)
 		j = find_str_num(s, c, j, 1);
 		if (s[j] == 0)
 			break ;
-		arr[i] = (char *)malloc(sizeof(char) * (get_len(s, c, j) + 1));
+		arr[i] = ft_calloc(sizeof(char), get_len(s, c, j) + 1);
 		if (arr[i] == 0)
 			return (allfree(arr, i));
 		j = fill_arr(arr[i++], s, c, j);

@@ -6,7 +6,7 @@
 /*   By: seonjo <seonjo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 11:32:30 by seonjo            #+#    #+#             */
-/*   Updated: 2023/03/15 13:10:37 by seonjo           ###   ########.fr       */
+/*   Updated: 2023/09/22 14:43:51 by seonjo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strdup(const char *s1)
 	l = 0;
 	while (s1[l])
 			l++;
-	dest = (char *)malloc(sizeof(char) * (l + 1));
+	dest = ft_calloc(sizeof(char), l + 1);
 	if (dest == 0)
 		return (0);
 	l = 0;

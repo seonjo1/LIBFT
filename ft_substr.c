@@ -6,7 +6,7 @@
 /*   By: seonjo <seonjo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 11:46:31 by seonjo            #+#    #+#             */
-/*   Updated: 2023/03/19 16:34:53 by seonjo           ###   ########.fr       */
+/*   Updated: 2023/09/22 14:45:59 by seonjo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static char	*make_emptystr(void)
 {
 	char	*c;
 
-	c = (char *)malloc(sizeof(char));
+	c = ft_calloc(sizeof(char), 1);
 	if (c == 0)
 		return (0);
 	*c = 0;
@@ -39,7 +39,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		l = len;
 	else
 		l -= st;
-	c = (char *)malloc(sizeof(char) * (l + 1));
+	c = ft_calloc(sizeof(char), l + 1);
 	if (c == 0)
 		return (0);
 	while (j < l)

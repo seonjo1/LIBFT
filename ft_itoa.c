@@ -6,7 +6,7 @@
 /*   By: seonjo <seonjo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 20:22:49 by seonjo            #+#    #+#             */
-/*   Updated: 2023/03/19 16:50:32 by seonjo           ###   ########.fr       */
+/*   Updated: 2023/09/22 14:39:34 by seonjo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	*ft_itoa(int n)
 
 	num = n;
 	size = get_len(n);
-	s = (char *)malloc(sizeof(char) * (size + 1));
+	s = ft_calloc(sizeof(char), (size + 1));
 	if (s == 0)
 		return (0);
 	if (num == 0)

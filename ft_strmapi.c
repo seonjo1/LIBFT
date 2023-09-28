@@ -6,7 +6,7 @@
 /*   By: seonjo <seonjo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 21:00:32 by seonjo            #+#    #+#             */
-/*   Updated: 2023/03/15 21:13:55 by seonjo           ###   ########.fr       */
+/*   Updated: 2023/09/22 14:44:28 by seonjo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*dest;
 
 	l = (unsigned int)ft_strlen(s);
-	dest = (char *)malloc(sizeof(char) * (l + 1));
+	dest = ft_calloc(sizeof(char), l + 1);
 	if (dest == 0)
 		return (0);
 	i = 0;

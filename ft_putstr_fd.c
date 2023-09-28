@@ -6,7 +6,7 @@
 /*   By: seonjo <seonjo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 22:33:12 by seonjo            #+#    #+#             */
-/*   Updated: 2023/03/15 22:35:01 by seonjo           ###   ########.fr       */
+/*   Updated: 2023/09/22 14:46:24 by seonjo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,14 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	write(fd, s, ft_strlen(s));
+	int	len;
+	int	i;
+
+	i = 0;
+	len = ft_strlen(s);
+	while (i < len)
+	{
+		write(fd, &s[i], 1);
+		i++;
+	}
 }
