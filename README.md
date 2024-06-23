@@ -25,20 +25,30 @@ C에서 사용되는 표준 함수들과 유용한 함수들을 직접 구현한
 
 ## 사용법
 
-**make**
-> mandatory 함수들을 사용할 수 있는 정적 라이브러리 libft.a 생성
+```
+make
+```
+- mandatory 함수들을 사용할 수 있는 정적 라이브러리 libft.a 생성
 
-**make bonus**
-> mandatory 함수 + bonus 함수들을 사용할 수 있는 정적 라이브러리 libft.a 생성
+```
+make bonus
+```
+- mandatory 함수 + bonus 함수들을 사용할 수 있는 정적 라이브러리 libft.a 생성
 
-**make clean**
-> make로 인해 만들어진 .o 파일 삭제
+```
+make clean
+```
+- make로 인해 만들어진 .o 파일 삭제
 
-**make fclean**
-> make clean + libft.a 삭제
+```
+make fclean
+```
+- make clean + libft.a 삭제
 
-**make re**
-> make fclean + make
+```
+make re
+```
+- make fclean + make
 
 --- 
 
